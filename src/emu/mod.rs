@@ -1,4 +1,5 @@
-// emulator module rootmod bus;
+// emulator module root
+mod bus;
 mod cart;
 mod cpu;
 mod ppu;

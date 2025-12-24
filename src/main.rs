@@ -1,4 +1,4 @@
-// main.rs (see previous message for full content)use anyhow::Result;
+use anyhow::Result;
 use clap::Parser;
 use pixels::{Pixels, SurfaceTexture};
 use winit::{
@@ -26,7 +26,7 @@ fn main() -> Result<()> {
 
     let mut emu = emu::Emulator::new(&args.rom)?;
 
-    let event_loop = EventLoop::new()?;
+    let event_loop = EventLoop::new();
     let width = 160u32;
     let height = 144u32;
 
@@ -49,15 +49,16 @@ fn main() -> Result<()> {
     // Simple input state (Game Boy buttons)
     let mut input = emu::JoypadState::default();
 
-    event_loop.run(move |event, elwt| {
-        elwt.set_control_flow(ControlFlow::Poll);
+    event_loop.run(move |event, _, control_flow| {
+        *control_flow = ControlFlow::Poll;
 
         match event {
             Event::WindowEvent { event, .. } => match event {
-                WindowEvent::CloseRequested => elwt.exit(),
+                WindowEvent::CloseRequested => *control_flow = ControlFlow::Exit,
 
                 WindowEvent::Resized(size) => {
                     pixels.resize_surface(size.width, size.height).ok();
+                    window.request_redraw();
                 }
 
                 WindowEvent::KeyboardInput { input: key, .. } => {
@@ -65,30 +66,28 @@ fn main() -> Result<()> {
                     emu.set_joypad(input);
                 }
 
-                WindowEvent::RedrawRequested => {
-                    // Run enough cycles for one frame (approx 70224 cycles/frame on DMG)
-                    // This is “frame stepping”. Timing will be refined later.
-                    emu.run_frame();
-
-                    // Copy emulator framebuffer to Pixels frame
-                    let frame = pixels.frame_mut();
-                    frame.copy_from_slice(emu.framebuffer_rgba());
-
-                    if pixels.render().is_err() {
-                        elwt.exit();
-                    }
-                }
-
                 _ => {}
             },
 
-            Event::AboutToWait => {
+            Event::RedrawRequested(_) => {
+                // Run enough cycles for one frame (approx 70224 cycles/frame on DMG)
+                emu.run_frame();
+
+                let frame = pixels.frame_mut();
+                frame.copy_from_slice(emu.framebuffer_rgba());
+
+                if pixels.render().is_err() {
+                    *control_flow = ControlFlow::Exit;
+                }
+            }
+
+            Event::MainEventsCleared => {
                 window.request_redraw();
             }
 
             _ => {}
         }
-    })?;
+    });
 
     // unreachable
 }

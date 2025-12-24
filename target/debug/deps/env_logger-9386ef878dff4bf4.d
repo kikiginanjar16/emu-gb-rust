@@ -1,0 +1,11 @@
+/Users/kiki/Documents/GITHUB/emu-gb-rust/target/debug/deps/env_logger-9386ef878dff4bf4.d: /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/lib.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/logger.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/mod.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/humantime.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/mod.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/buffer.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/target.rs
+
+/Users/kiki/Documents/GITHUB/emu-gb-rust/target/debug/deps/libenv_logger-9386ef878dff4bf4.rmeta: /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/lib.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/logger.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/mod.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/humantime.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/mod.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/buffer.rs /Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/target.rs
+
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/lib.rs:
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/logger.rs:
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/mod.rs:
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/humantime.rs:
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/mod.rs:
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/buffer.rs:
+/Users/kiki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_logger-0.11.8/src/fmt/writer/target.rs:
