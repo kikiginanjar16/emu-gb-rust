@@ -1,1 +1,0 @@
-Window: pixels::raw_window_handle::HasRawDisplayHandle
